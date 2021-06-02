@@ -27,6 +27,30 @@
 .App-link {
   color: #61dafb;
 }
+header {
+  
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px;
+  border-bottom: 1px solid #efefef;
+  margin-bottom: 32px;
+}
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #1c5d76;
+  font-weight: bold;
+  margin-right: 8px;
+  padding: 10px;
+}
 
 @keyframes App-logo-spin {
   from {
