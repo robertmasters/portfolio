@@ -1,0 +1,156 @@
+html {
+    // background-color: #282c34
+    background-color: #bfdde6;
+  
+  }
+  
+//   .App {
+//     background-color: orange;
+//     grid-column: 1/3;
+//     grid-row: 1/3;
+
+//     text-align: center;
+//     display: grid;
+//     grid-template-columns: 1fr, 2fr, 1fr ;
+//     grid-gap: 1em;
+//     grid-auto-rows: minmax(100px, auto);
+//     // justify-items: stretch;
+//     // align-items: center;
+//     border: 1px solid black;
+//     width: 100%;
+    
+//   }
+
+.main-container{
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr; //this breaks the with into 4 different equally sized sections, with the middle f2 part taking up 2 of the sections in the middle. 
+    grid-gap: 20px;
+    padding: 1em;
+    color: white;
+    grid-auto-rows: minmax(100px, auto); //minimum of 100px but can auto adjust  if contents extends past 100px
+    // justify-items: stretch; //stretches the item across its sections witdh
+    // align-items: stretch; // stretches the item across its sections height
+  
+}
+  
+  
+  .App-header {
+    grid-column: 1/3;
+    grid-row: 1/3;
+
+    // background-color: #282c34;
+    min-height: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    border: 1px solid #efefef;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+    border-bottom: 1px solid #efefef;
+    margin-bottom: 32px;
+    
+  }
+  
+  .banner {
+    color: #1c5d76;
+    font-family: Papyrus ,Arial, Helvetica, sans-serif;
+    font-size: 400%;
+    // grid-column: 1;
+    // grid-row: 1;
+    border: 1px solid #efefef;
+  
+    
+  }
+  .nav-links {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #1c5d76; //alternate color #efefef
+    font-weight: bold;
+    margin-right: 8px;
+    padding: 10px;
+  }
+  
+  body {
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    // min-height: 100vh;
+    // background-color: red;
+  
+  }
+  
+  // .project-display {
+  //   border: 1px solid #a0e4ff ;  //alternate color #1c5d76
+  //   padding: 10px;
+  //   margin: 10px;
+  // }
+  .project-display-container {
+    grid-column: 3;
+    grid-row: 1/3;  
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #efefef;
+    // grid-column: 1/4;
+  }
+  
+  .skills-component {
+    grid-column: 1;
+    grid-row: 2/4;
+
+    background-color: white;
+    border: 1px solid #efefef;
+    grid-column: 1;
+    grid-row: 2/4;
+  
+  }
+  
+  .skills-label{
+    // font-family: Papyrus;
+    color: #1c5d76;
+    font-size: 200%;
+    font-family: Papyrus ,Arial, Helvetica, sans-serif;
+  
+  }
+  .skills-component a{
+    display: flex;
+    flex-direction: column;
+    align-items:baseline;
+    justify-content: center;
+    
+    text-decoration: none;
+    color: #1c5d76; //#1c5d76 try this color as well
+    font-weight: bold;
+    margin-right: 8px;
+    padding: 10px;
+    // border-right: 1px solid #efefef;
+  }
+   img {
+    border-radius: 8px;
+    // -webkit-box-reflect: below 1px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.3));
+    margin: 10px;
+    width: 70%;
+    // box-shadow: 0px 0px px 0px rgb(0, 0, 0.27);
+      box-shadow: 0 20px 60px rgba(44, 44, 44, 0.8);
+  
+  }
