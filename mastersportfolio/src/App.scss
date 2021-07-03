@@ -1,8 +1,10 @@
 html {
+  font-size: 25px;
   // background-color: #282c34
   background-color: #bfdde6;
   margin: 0 auto;
   width: 84%;
+  color: #4d6974;
 }
 
 .main-container{
@@ -12,7 +14,6 @@ html {
   grid-template-rows: 1fr  ;
   // grid-gap: 20px;
   padding: 10px;
-  color: white;
   grid-auto-rows: minmax(50px, auto); //minimum of 100px but can auto adjust  if contents extends past 100px
 
 }
@@ -24,20 +25,17 @@ html {
   grid-row: 1;
   z-index: 2;
 
-  border: 50px solid transparent;
+  border: 30px solid transparent;
 
   //this part makes a transparent border which allows me to make the design aesthetic better without having to mess around with the grid placement
   -moz-background-clip: padding;
   -webkit-background-clip: padding;
   background-clip: padding-box;
-
-  
-  
-  
+    
 }
 .box1inside{
   // border: 5px solid rgba(28, 93, 118, 0.693);
-  border-bottom: 5px solid #1c5d76;
+  // border-bottom: 5px solid #1c5d76;
   // border-radius: 40px 40px 40px 41px;
 
 }
@@ -58,29 +56,41 @@ html {
 	// font-size: 120px;
 	line-height: 1.2;
 	margin: 10px 0;
-  -webkit-text-stroke: 1px white;
-
-  
-
+  // -webkit-text-stroke: 1px white;
 }
 
 .nav-links {
-
+  // color: #ffffff;
   display: flex;
-  justify-content: space-between;
-  // align-items: center;
-  // padding: 0 20%;
+  justify-content: center;
+  align-items: center;
   margin: 0 auto;
-  width: 50%;
+  width: 100%;
+  // border: 1px solid white;
+  background-color:#4d6974;
+  // border-bottom: 3px solid #333;
+  // border-top: 3px solid #333;
+
   
   
 }
 .nav-links a {
   text-decoration: none;
-  color: #1c5d76; //alternate color #efefef
+  // background-color: #333;
+  // align-items: center;
+  color: #ffffff; //alternate color #efefef
   font-weight: bold;
   margin-right: 8px;
-  padding: 10px;
+  padding: 5px;
+  
+}
+
+.nav-links a:hover {
+  // text-shadow: #fff 0px 0px 15px;
+  color: #4d6974;
+  // font-weight: 1000;
+  background-color: white;
+
 }
 
 .box2 {
@@ -89,26 +99,23 @@ html {
   grid-row: 1/4;
   z-index: 1; //z index assigns the order of the item
 
-    min-height: 10vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  // font-size: calc(10px + 2vmin);
 
-
-    -moz-background-clip: padding;
-    -webkit-background-clip: padding;
-    background-clip: padding-box;
+  // border: 5px solid transparent;
+  // -moz-background-clip: padding;
+  // -webkit-background-clip: padding;
+  // background-clip: padding-box;
 }
 
 .skills-label{
-  // font-family: Papyrus;
-  color: #1c5d76;
-  font-size: 50px;
+  font-size: 350%;
   font-weight: bolder;
   font-family: Papyrus ,Arial, Helvetica, sans-serif;
+  // text-shadow: 2px 5px #333;
 
 
 }
@@ -123,36 +130,24 @@ html {
   border-top: 5px solid #bfdde6;
   padding-bottom: 20px;
 }
-// .skills-topline3 {
-//   width: 100%;
-//   border-top: 3px solid #bfdde6;
-// }
-
-.skills-bottomline1 {
-  width: 100%;
-  border-top: 5px solid #bfdde6;
-  padding: 2px;
-
-}
-.skills-bottomline2 {
-  width: 100%;
-  border-top: 30px solid #bfdde6;
-
-}
-
 
 .skills-component a{
   display: flex;
   flex-direction: column;
-  align-items:baseline;
+  align-items:center;
   justify-content: center;
   
   text-decoration: none;
-  color: #1c5d76; //#1c5d76 try this color as well
-  font-weight: bold;
+  color: #4d6974; //#1c5d76 try this color as well
+  font-weight: 500;
   margin-right: 8px;
-  padding: 10px;
+  padding: 1px;
   // border-right: 1px solid #efefef;
+}
+
+.skills-component a:hover {
+  font-weight: bolder ;
+  color: #333;
 }
 
 .box3 {
@@ -166,8 +161,15 @@ align-items: center;
 
 }
 
+.intro {
+  font-weight: 500;
+  padding-bottom: 10px;
+  // border-bottom: 3px solid #ffffff;
+  line-height: 1;
+  width: 80%;
+}
+
 .featured-label{
-  color: #1c5d76;
   font-size: 50px;
   font-family: Papyrus ,Arial, Helvetica, sans-serif;
   font-weight: bolder;
@@ -179,7 +181,96 @@ img {
   margin: 10px;
   width: 90%;
   // box-shadow: 0px 0px px 0px rgb(0, 0, 0.27);
-  box-shadow: 0 20px 60px rgba(44, 44, 44, 0.8);
+  box-shadow: 0 20px 70px rgba(44, 44, 44, 0.8);
 
 }
 
+@media (max-width: 1380px) { //large desktop screen
+  .banner {
+  // original stats
+  // font-size: 370%;
+  // font-weight: bolder;
+    font-size: 250%;
+  }
+  .skills-label {
+  // original stats
+  // font-size: 350px;
+  font-size: 300%;
+  }
+  .featured-label{
+    font-size: 200%;
+  }
+}
+
+@media (max-width: 1000px) { //small desktop screen
+  html {
+    //original stats
+    //font-size: 25px
+    font-size: 20px;
+  }
+  .box1{
+    font-size: 20px;
+  }
+  .banner {
+    // original stats
+    // font-size: 370%;
+    // font-weight: bolder;
+      font-size: 250%;
+    }
+  .skills-label {
+    // original stats
+    // font-size: 350px;
+    font-size: 300%;
+    }
+}
+@media (max-width: 740px) { //tablet
+  html {
+    width: 90%;
+    //original stats
+    //font-size: 25px
+    font-size: 15px;
+  } 
+  .box1{
+      font-size: 15px;
+      border: 10px solid transparent;
+  }
+  .banner {
+    // original stats
+    // font-size: 370%;
+    // font-weight: bolder;
+      font-size: 250%;
+  }
+
+  .skills-label {
+    // original stats
+    // font-size: 350px;
+    font-size: 300%;
+    }
+
+}
+
+@media (max-width: 420px) { //mobile
+  html {
+    width: 95%;
+    //original stats
+    //font-size: 25px
+    font-size: 12px;
+  } 
+  .box1{
+      font-size: 12px;
+      border: 2px solid transparent;
+  }
+  .banner {
+    // original stats
+    // font-size: 370%;
+    // font-weight: bolder;
+      font-size: 235%;
+  }
+
+  .skills-label {
+    // original stats
+    // font-size: 350px;
+    font-size: 300%;
+    }
+
+}
