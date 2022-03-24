@@ -1,12 +1,13 @@
-import logo from './logo.svg';
 import './App.scss';
 import Navigation from './components/header/navigation'
 import ProjectDisplay from './components/Projects/projectDisplayComponent';
-import SkillsComponent from './components/Skills/SkillsComponent';
+import SkillsHomeComponent from './components/Skills/SkillsHomeComponent';
 import Banner from './components/header/Banner';
+import {BrowserRouter as Router, Route } from 'react-router-dom'
 
 function App() {
   return (
+    <Router>
     <div className="App">
 
       <div className = "main-container">
@@ -19,30 +20,29 @@ function App() {
         </header>
 
         <div className="box2">
-          <div className = "skills-topline1"> </div>
-          <div className = "skills-topline2"> </div>
-          <div className = "skills-topline3"> </div>
-          <SkillsComponent />
+          <Route exact path = "/"  className = "skills-topline1"> </Route>
+          <Route exact path = "/"  className = "skills-topline2"> </Route>
+          <Route exact path = "/" component = {SkillsHomeComponent} />
 
         </div>
 
           <div className = "box3">
 
-          <div className = "intro">
-          Hello I am a software developer currently living in Florida. I am skilled at making websites and android mobile applications from the front end to the back end. This includes: making mobile applications using native technologies such as Java and Kotlin, creating fully functional websites using state management tech such as context or reddux, I can also build fully functional API applications using Spring, but am willing to learn other technologies.
+          <Route exact path = "/"  >
+          <div className = "intro">Hello I am a full stack software developer currently living in Florida. Here is a list of my tech skillset: making REST API applications using Java or Kotlin incorporating tech like OAuth2 for authentication or JUnit for testing, and PostgreSQL as the DBMS. Fully functional websites using HTML5, CSS, Javascript and React incorporating tech such as context, redux, jest, & axios. I am constanly learning new ways of refininig my skills and I am willing to learn other technologies if they help me accomplish whatever task is thrown at me.
+          </div>
+          </Route>
+
+          <Route exact path = "/"  ><div className = "featured-label">Featured Projects</div></Route>
+            <Route exact path = "/" component = {ProjectDisplay} />
           </div>
 
-            <div className = "featured-label" >Featured Projects</div>
-            <img src = {require('./projectDisplayImages/cimg1.jpg').default}  />
-            <img src = {require('./projectDisplayImages/cimg3.jpg').default}  />
-            <img src = {require('./projectDisplayImages/cimg4.jpg').default}  />
-            <img src = {require('./projectDisplayImages/cimg2.png').default}  />
-
-          </div>
+          
     
       </div>
   
     </div>
+    </Router>
   );
 }
 

@@ -6,10 +6,10 @@ export default function ProjectDisplay() {
     return (
         
         <div className='project-display'>
-        <img src = {require('../Projects/cimg1.jpg').default}  />
-        <img src = {require('../Projects/cimg2.png').default}  />
-        <img src = {require('../Projects/cimg3.jpg').default}  />
-        <img src = {require('../Projects/cimg4.jpg').default}  />
+        <img src = {require('../home/projectDisplayImages/cimg1.jpg').default}  />
+        <img src = {require('../home/projectDisplayImages/cimg2.png').default}  />
+        <img src = {require('../home/projectDisplayImages/cimg3.jpg').default}  />
+        <img src = {require('../home/projectDisplayImages/cimg4.jpg').default}  />
         </div>
         
     )

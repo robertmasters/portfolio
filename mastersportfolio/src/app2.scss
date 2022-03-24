@@ -21,19 +21,8 @@ html {
     
 //   }
 
-.main-container{
-    text-align: center;
-    display: grid;
-    grid-template-columns: 1fr 1fr; //this breaks the with into 4 different equally sized sections, with the middle f2 part taking up 2 of the sections in the middle. 
-    grid-gap: 20px;
-    padding: 1em;
-    color: white;
-    grid-auto-rows: minmax(100px, auto); //minimum of 100px but can auto adjust  if contents extends past 100px
-    // justify-items: stretch; //stretches the item across its sections witdh
-    // align-items: stretch; // stretches the item across its sections height
-  
-}
-  
+
+
   
   .App-header {
     grid-column: 1/3;
@@ -69,11 +58,7 @@ html {
     color: #1c5d76;
     font-family: Papyrus ,Arial, Helvetica, sans-serif;
     font-size: 400%;
-    // grid-column: 1;
-    // grid-row: 1;
     border: 1px solid #efefef;
-  
-    
   }
   .nav-links {
     display: flex;
@@ -154,3 +139,57 @@ html {
       box-shadow: 0 20px 60px rgba(44, 44, 44, 0.8);
   
   }
+
+
+  html {
+    // background-color: #282c34
+    background-color: #bfdde6;
+  
+  }
+  
+  .main-container{
+    text-align: center;
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr; //this breaks the with into 4 different equally sized sections, with the middle f2 part taking up 2 of the sections in the middle. 
+    grid-gap: 20px;
+    padding: 1em;
+    color: white;
+    grid-auto-rows: minmax(100px, auto); //minimum of 100px but can auto adjust  if contents extends past 100px
+    // justify-items: stretch; //stretches the item across its sections witdh
+    // align-items: stretch; // stretches the item across its sections height
+  
+  }
+  
+  .box1 {
+    background-color: orange;
+    grid-column: 1/3;
+    grid-row: 1/3;
+  
+      // background-color: #282c34;
+      min-height: 10vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: calc(10px + 2vmin);
+      color: white;
+      border: 1px solid #efefef;
+  
+  }
+  
+  .box2{
+    font-size: 30px;
+    background-color: blue;
+    grid-column: 1;
+    grid-row: 2/4;
+  }
+  
+  .box3 {
+  font-size: 30px;
+  background-color: red;
+  // grid-column: 3;
+  // grid-row: 1/3;
+  }
+  
+  
